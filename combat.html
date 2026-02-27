@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<script type="module" src="js/game.js"></script>
+</head>
+<body onload="startCombat()">
+<div class="container">
+<div class="panel">
+<div>👤 Joueur</div>
+<div class="bar-container"><div id="playerHP" class="bar hp-player"></div></div>
+<div class="bar-container"><div id="mana" class="bar mana"></div></div>
+</div>
+<div class="panel">
+<div id="enemyName"></div>
+<div class="bar-container"><div id="enemyHP" class="bar hp-enemy"></div></div>
+</div>
+<div class="panel">
+<button class="button" onclick="attack('physical')">🗡️ Attaque</button>
+<button class="button secondary" onclick="attack('magic')">✨ Magie</button>
+</div>
+<div class="panel">
+<div id="combatInv"></div>
+</div>
+</div>
+</body>
+</html>
