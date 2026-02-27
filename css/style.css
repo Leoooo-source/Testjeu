@@ -1,0 +1,45 @@
+
+@keyframes fogMove {
+0% {background-position:0 0;}
+100% {background-position:400px 400px;}
+}
+
+body{
+margin:0;
+font-family:system-ui;
+background:#05070d;
+color:#d6e2ff;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;left:0;width:200%;height:200%;
+background:radial-gradient(circle at 20% 30%, rgba(40,60,90,0.2), transparent 40%),
+radial-gradient(circle at 80% 70%, rgba(20,40,70,0.2), transparent 40%);
+animation:fogMove 40s linear infinite;
+z-index:-1;
+}
+
+.container{max-width:480px;margin:auto;padding:14px;}
+.panel{background:rgba(18,26,43,0.9);padding:14px;border-radius:14px;margin-bottom:12px;}
+.button{width:100%;padding:14px;margin-top:8px;border:none;border-radius:12px;background:#163a59;color:#e6f0ff;font-weight:600;}
+.button.secondary{background:#1e293b;}
+.button.danger{background:#7f1d1d;}
+
+.bar-container{
+background:#1e293b;
+border-radius:10px;
+overflow:hidden;
+height:18px;
+margin-bottom:6px;
+}
+
+.bar{
+height:100%;
+transition:width 0.3s ease;
+}
+
+.hp{background:#7f1d1d;}
+.mana{background:#1d4ed8;}

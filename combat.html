@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/core.js"></script>
+<script src="js/combat.js"></script>
+</head>
+<body onload="spawnEnemy()">
+<div class="container">
+<div class="panel">
+<h3>Combat</h3>
+
+<div>Vie Joueur</div>
+<div class="bar-container"><div id="playerHPBar" class="bar hp"></div></div>
+
+<div>Mana</div>
+<div class="bar-container"><div id="playerManaBar" class="bar mana"></div></div>
+
+<div>Vie Monstre</div>
+<div class="bar-container"><div id="enemyHPBar" class="bar hp"></div></div>
+
+<button class="button" onclick="attack('physical')">Attaque Physique</button>
+<button class="button secondary" onclick="attack('magic')">Sort Occulte</button>
+</div>
+</div>
+</body>
+</html>
