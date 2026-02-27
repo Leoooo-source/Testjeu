@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/core.js"></script>
+<script src="js/events.js"></script></head>
+<body>
+<div class="container">
+<div class="panel">
+<h3>Carte - Étage <script>document.write(player.floor)</script></h3>
+<div class="map">
+<div class="node" onclick="location.href='combat.html'">⚔️</div>
+<div class="node" onclick="triggerEvent()">❓</div>
+<div class="node" onclick="location.href='combat.html'">⚔️</div>
+</div>
+<button class="button secondary" onclick="location.href='index.html'">Retour</button>
+<div class="log" id="eventLog"></div>
+</div></div>
+
+<script>
+function triggerEvent(){
+let e=randomEvent();
+document.getElementById("eventLog").innerHTML=e.text;
+}
+</script>
+
+</body></html>
