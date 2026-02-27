@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/core.js"></script>
+</head>
+<body onload="if(!player){initPlayer()}">
+<div class="container">
+<div class="panel">
+<h2>Les Profondeurs</h2>
+<p>Niveau: <script>document.write(player.level)</script></p>
+<p>Score: <script>document.write(player.score)</script></p>
+<button class="button" onclick="location.href='exploration.html'">Explorer</button>
+<button class="button secondary" onclick="location.href='inventory.html'">Inventaire</button>
+</div>
+</div>
+</body>
+</html>

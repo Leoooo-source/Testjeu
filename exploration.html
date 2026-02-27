@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/core.js"></script>
+<script src="js/monsters.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="panel">
+<h3>Carte</h3>
+<div class="map">
+<div class="node" onclick="encounter()">Avancer</div>
+<div class="node" onclick="encounter()">Gauche</div>
+<div class="node" onclick="encounter()">Droite</div>
+</div>
+<button class="button secondary" onclick="location.href='index.html'">Retour</button>
+</div>
+</div>
+
+<script>
+function encounter(){
+if(Math.random()<0.6){
+location.href="combat.html";
+}else{
+player.inventory.push("Petite Potion");
+player.progress++;
+player.score=player.progress;
+save();
+alert("Vous trouvez une potion.");
+}
+}
+</script>
+
+</body>
+</html>
