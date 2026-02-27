@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/core.js"></script>
+<script src="js/combat.js"></script>
+</head>
+<body onload="spawnEnemy()">
+<div class="container">
+<div class="panel">
+<div class="icon" id="enemyIcon"></div>
+<h3 id="enemyName"></h3>
+<p>HP Joueur: <span id="playerHP"></span></p>
+<p>HP Monstre: <span id="enemyHP"></span></p>
+<button class="button" onclick="attack('physical')">Attaque Physique</button>
+<button class="button secondary" onclick="attack('magic')">Attaque Magique</button>
+</div>
+</div>
+</body>
+</html>
