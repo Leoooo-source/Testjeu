@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/core.js"></script></head>
+<body>
+<div class="container">
+<div class="panel">
+<h3>Étage <script>document.write(player.floor)</script></h3>
+<div class="map" id="map"></div>
+<button class="button secondary" onclick="location.href='index.html'">Retour</button>
+<div class="log" id="eventLog"></div>
+</div></div>
+
+<script>
+function generateMap(){
+let map=document.getElementById("map");
+map.innerHTML="";
+for(let i=0;i<3;i++){
+let roll=Math.random();
+let node=document.createElement("div");
+node.className="node";
+
+if(roll<0.6){
+node.innerText="⚔️";
+node.onclick=()=>location.href="combat.html";
+}
+else if(roll<0.9){
+node.innerText="❓";
+node.onclick=()=>eventNode();
+}
+else{
+node.innerText="💎";
+node.classList.add("treasure");
+node.onclick=()=>treasure();
+}
+map.appendChild(node);
+}
+}
+
+function eventNode(){
+player.floor++;
+player.score+=50;
+save();
+document.getElementById("eventLog").innerText="Un événement étrange survient...";
+}
+
+function treasure(){
+player.inventory.push("Artefact Rare");
+player.score+=300;
+player.floor++;
+save();
+document.getElementById("eventLog").innerText="Vous trouvez un Artefact Rare !";
+}
+
+generateMap();
+</script>
+
+</body></html>
