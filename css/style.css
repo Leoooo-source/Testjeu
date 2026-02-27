@@ -1,0 +1,57 @@
+
+@keyframes fadeIn {
+from {opacity:0; transform:translateY(8px);}
+to {opacity:1; transform:translateY(0);}
+}
+
+@keyframes hitFlash {
+0% {filter:brightness(1);}
+50% {filter:brightness(1.8);}
+100% {filter:brightness(1);}
+}
+
+body{
+margin:0;
+font-family:system-ui;
+background:#0b0614;
+color:#f5e9ff;
+animation:fadeIn 0.4s ease;
+}
+
+.container{max-width:480px;margin:auto;padding:14px;}
+
+.panel{
+background:#1a1026;
+padding:14px;
+border-radius:14px;
+margin-bottom:14px;
+}
+
+.title{font-weight:bold;margin-bottom:8px;}
+
+.button{
+width:100%;
+padding:14px;
+margin-top:8px;
+border:none;
+border-radius:12px;
+background:#6d28d9;
+color:white;
+font-weight:600;
+}
+
+.button.secondary{background:#4c1d95;}
+.button.danger{background:#7f1d1d;}
+
+.bar-container{
+background:#2e1a47;
+border-radius:10px;
+overflow:hidden;
+height:18px;
+margin-bottom:6px;
+}
+
+.bar{height:100%;transition:width 0.3s ease;}
+.hp-player{background:#22c55e;}
+.hp-enemy{background:#ef4444;}
+.mana{background:#a855f7;}

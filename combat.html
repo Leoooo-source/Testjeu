@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/core.js"></script>
+<script src="js/combat.js"></script>
+</head>
+<body onload="spawnEnemy()">
+<div class="container">
+
+<div id="playerPanel" class="panel">
+<div class="title">Joueur</div>
+<div class="bar-container"><div id="playerHPBar" class="bar hp-player"></div></div>
+<div class="bar-container"><div id="playerManaBar" class="bar mana"></div></div>
+</div>
+
+<div id="enemyPanel" class="panel">
+<div class="title">Monstre</div>
+<div class="bar-container"><div id="enemyHPBar" class="bar hp-enemy"></div></div>
+</div>
+
+<div class="panel">
+<button class="button" onclick="attack('physical')">Attaque Physique</button>
+<button class="button secondary" onclick="attack('magic')">Sort Magique</button>
+</div>
+
+</div>
+</body>
+</html>

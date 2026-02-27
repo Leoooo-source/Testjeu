@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/core.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="panel">
+<h3>Choisissez votre voie</h3>
+<button class="button" onclick="location.href='combat.html'">⚔️ Combat</button>
+<button class="button secondary" onclick="event()">📜 Événement</button>
+<button class="button secondary" onclick="risk()">☠️ Risque accru</button>
+<button class="button secondary" onclick="location.href='index.html'">Retour</button>
+</div>
+</div>
+
+<script>
+function event(){
+player.inventory.push("Potion");
+player.progress++;
+player.score=player.progress;
+save();
+alert("Vous trouvez une relique oubliée.");
+}
+
+function risk(){
+if(Math.random()<0.5){
+location.href='combat.html';
+}else{
+player.hp-=20;
+save();
+alert("Une ombre vous blesse (-20 HP)");
+}
+}
+</script>
+
+</body>
+</html>
